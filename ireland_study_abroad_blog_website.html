@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ireland Study Abroad Blog</title>
+
+  <style>
+    :root {
+      --green: #2f6f4f;
+      --light: #f7f7f7;
+      --dark: #1a1a1a;
+      --accent: #e6efe9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    a:focus, button:focus {
+      outline: 3px solid #000;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--green);
+    }
+
+    .hero {
+      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      background: rgba(0,0,0,0.4);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    .caption {
+      text-align: center;
+      padding: 1rem;
+      font-style: italic;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    #scrollTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #scrollTop:hover {
+      background: #1f4f37;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: black;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header>
+  <h2>My Ireland Blog</h2>
+  <nav>
+    <a href="#travels">Travels</a>
+    <a href="#food">Food</a>
+    <a href="#class">Class</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Exploring Ireland 🇮🇪</h1>
+</div>
+
+<div class="caption">
+  A journey through landscapes, culture, and everyday moments.
+</div>
+
+<main id="main">
+
+<section id="travels">
+  <h2>Travels</h2>
+  <div class="grid">
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Cliffs">
+      <div class="card-content">
+        <h3>Galway Trip</h3>
+        <p>The cliffs, my opinions, and accessibility issues.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Bus tour">
+      <div class="card-content">
+        <h3>Bus Tour</h3>
+        <p>Site seeing, historic events, and parks.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="food">
+  <h2>Food</h2>
+  <div class="grid">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Food">
+      <div class="card-content">
+        <h3>Best Shops</h3>
+        <p>Cultural differences and local favorites.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="class">
+  <h2>Class</h2>
+  <div class="grid">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Class">
+      <div class="card-content">
+        <h3>Study Abroad</h3>
+        <p>What I'm learning and how it's different.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="grid">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Ireland scenery">
+      <div class="card-content">
+        <p>Moments captured along the journey.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 My Ireland Journey</p>
+</footer>
+
+<button id="scrollTop" onclick="scrollToTop()">Top ↑</button>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
