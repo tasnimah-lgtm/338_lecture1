@@ -2,246 +2,210 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ireland Study Abroad Blog</title>
-
-  <style>
-    :root {
-      --green: #2f6f4f;
-      --light: #f7f7f7;
-      --dark: #1a1a1a;
-      --accent: #e6efe9;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-
-    a:focus, button:focus {
-      outline: 3px solid #000;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      background: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: var(--dark);
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: var(--green);
-    }
-
-    .hero {
-      height: 80vh;
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero h1 {
-      background: rgba(0,0,0,0.4);
-      padding: 1rem 2rem;
-      border-radius: 10px;
-    }
-
-    .caption {
-      text-align: center;
-      padding: 1rem;
-      font-style: italic;
-    }
-
-    section {
-      padding: 2rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    #scrollTop {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 10px 15px;
-      background: var(--green);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    #scrollTop:hover {
-      background: #1f4f37;
-    }
-
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: black;
-      color: white;
-      padding: 8px;
-      z-index: 100;
-    }
-
-    .skip-link:focus {
-      top: 0;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wanderlines — Lecture 2 Starter</title>
+  <!-- Link the reset and style .css files -->
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<a href="#main" class="skip-link">Skip to main content</a>
+  <!-- ============================================================
+       LARGE STICKY HEADER
+       Required: must remain visible while the user scrolls.
+       ============================================================ -->
+  <header>
+    <div class="brand">
+      <h1>Wanderlines</h1>
+      <p class="tagline">A travel blog about how you get there.</p>
+    </div>
+    <nav>
+      <a href="#gallery-grid">Grid Gallery</a>
+      <a href="#gallery-flex">Flex Gallery</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
 
-<header>
-  <h2>My Ireland Blog</h2>
-  <nav>
-    <a href="#travels">Travels</a>
-    <a href="#food">Food</a>
-    <a href="#class">Class</a>
-    <a href="#gallery">Gallery</a>
-  </nav>
-</header>
+  <main>
 
-<div class="hero">
-  <h1>Exploring Ireland 🇮🇪</h1>
-</div>
+    <!-- ============================================================
+         SECTION 1 — Photo gallery, styled with display: grid + minmax()
+         At least 10 cards. Each card = image + heading + description.
+         ============================================================ -->
+    <section id="grid-gallery">
+      <header>
+        <h2>Ireland — Grid Gallery</h2>
+        <p>Style this <code>.grid</code> with <strong>display: grid</strong> and
+        <code>repeat(auto-fill, minmax(220px, 1fr))</code> in styles.css.</p>
+      </header>
 
-<div class="caption">
-  A journey through landscapes, culture, and everyday moments.
-</div>
+      <div class="grid">
+        <figure>
+          <img src="img/tulips.jpeg"  
+               alt="pink tulips in a garden">
+          <figcaption>found this cute park on my walk</figcaption>
+        </figure>
 
-<main id="main">
+        <figure>
+          <img src="img/oceanview.jpeg"
+               alt="cliffs with ocean view of south dublin">
+          <figcaption>worth the train ride</figcaption>     
+        </figure>
 
-<section id="travels">
-  <h2>Travels</h2>
-  <div class="grid">
+        <figure>
+          <img src="img/food.jpeg"
+               alt="chicken skewers with sauce and a side of salad">
+          <figcaption>yum </figcaption>
+        </figure>
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Cliffs">
-      <div class="card-content">
-        <h3>Galway Trip</h3>
-        <p>The cliffs, my opinions, and accessibility issues.</p>
+        <figure>
+          <img src="img/bird.jpeg"
+               alt="seagul standing on rock with a floral background of trees and plants ">
+          <figcaption>domesticated seagull</figcaption>
+        </figure>
+
+        <figure>
+          <img src="img/icecream.jpeg"
+               alt=" scoop of icecream with crumbs underneath and square piece of brownie, with choclate drizzle on plate ">
+          <figcaption> molten lava cake from chili's</figcaption>
+        </figure>
+
+        <figure>
+          <img src="img/building.jpeg"
+               alt="night photo of huge historical white building">
+          <figcaption>late night walks</figcaption>
+        </figure>
+
+        <figure>
+          <img src="img/palmtrees.jpeg"
+               alt="pink duck with golden crown on holding a sign saying "please don't feed me on a shelf with multiple small ducks underneath">
+          <figcaption>duck that belongs in my car</figcaption>
+        </figure>
+
+        <figure>
+          <img src="img/ducks.jpeg"
+               alt="palm trees with modern pattern building behind" >
+          <figcaption>miami beach trip</figcaption>
+        </figure>
+
+        <figure>
+          <img src="img/statue.jpeg"
+               alt="dark green statue of bear holding a shovel">
+          <figcaption>my buddy</figcaption>
+        </figure>
+
+        <figure>
+          <img src="img/bench.jpeg"
+               alt="bench with pink heart shaped balloons propped on top with bouquet of flowers">
+          <figcaption>Spring Day</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/kilkenny/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Kilkenny</figcaption>
+        </figure>
       </div>
-    </article>
+    </section>
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Bus tour">
-      <div class="card-content">
-        <h3>Bus Tour</h3>
-        <p>Site seeing, historic events, and parks.</p>
+    <!-- ============================================================
+         SECTION 2 — Photo gallery, styled with display: flex
+         At least 10 cards. Same content shape; different layout.
+         ============================================================ -->
+    <section id="flex-gallery">
+      <header>
+        <h2>Food & Drink — Flex Gallery</h2>
+        <p>Style this <code>.flex</code> with <strong>display: flex</strong>,
+        <code>flex-wrap: wrap</code>, and <code>flex: 1 0 250px; </code> on the figures.</p>
+      </header>
+
+      <div class="flex">
+        <figure>
+          <img src="img/tulips.jpeg"
+               alt="Pink tulips in a garden">
+          <figcaption>Full Irish breakfast</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/pub/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Pub in Temple Bar</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/seafood/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Seafood chowder</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/scones/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Cream tea</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/whiskey/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Distillery tour</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/coffee/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Morning coffee</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/farmers/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Farmers market</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/cheese/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Local cheese plate</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/stew/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Beef and Guinness stew</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/bread/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Soda bread</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/dessert/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>Apple tart</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://picsum.photos/seed/pint/640/420"
+               alt="REPLACE: specific description">
+          <figcaption>The perfect pint</figcaption>
+        </figure>
       </div>
-    </article>
+    </section>
 
-  </div>
-</section>
+    <section id="about">
+      <h2>About this site</h2>
+      <p>This is a class assignment. Replace this paragraph with a short blurb
+      about your trip and what kind of accessibility considerations you put into
+      the design.</p>
+    </section>
 
-<section id="food">
-  <h2>Food</h2>
-  <div class="grid">
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Food">
-      <div class="card-content">
-        <h3>Best Shops</h3>
-        <p>Cultural differences and local favorites.</p>
-      </div>
-    </article>
-  </div>
-</section>
+  </main>
 
-<section id="class">
-  <h2>Class</h2>
-  <div class="grid">
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Class">
-      <div class="card-content">
-        <h3>Study Abroad</h3>
-        <p>What I'm learning and how it's different.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="grid">
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Ireland scenery">
-      <div class="card-content">
-        <p>Moments captured along the journey.</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <p>© 2026 My Ireland Journey</p>
-</footer>
-
-<button id="scrollTop" onclick="scrollToTop()">Top ↑</button>
-
-<script>
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
+  <footer>
+    <p>&copy; 2026 Colleen van Lent; Built for Accessible Web Design Lecture 2</p>
+  </footer>
 
 </body>
 </html>
